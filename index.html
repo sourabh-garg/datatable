@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title> Data Table</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            color: #dbdcde;
+        }
+
+        body {
+            background-color: #003584;
+            min-height: 100vh;
+            min-width: 100vw;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+        }
+
+        #header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .header_item {
+            width: 200px;
+            display: flex;
+            align-items: center;
+        }
+
+        #country_table {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            background-color: #0e1539;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        #content_parent {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            max-height: 700px;
+            overflow-y: auto;
+        }
+
+        .content_row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .row_item {
+            width: 200px;
+        }
+
+        .input_filter {
+            width: 80%;
+            height: 30px;
+            outline: none;
+            border-radius: 4px;
+            border: none;
+            background-color: #5d74dc;
+            padding-left: 15px;
+        }
+
+        .header_style {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #202a5f;
+            padding: 10px 15px;
+        }
+
+        .pad_bottom_20 {
+            padding-bottom: 20px;
+        }
+
+
+        .header_style div {
+            text-transform: capitalize;
+        }
+
+        .content_row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #ffffff1c;
+            font-size: 13px;
+        }
+
+        .sort_icon_div {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+        }
+
+        .sort_icon_div img {
+            width: 15px;
+            cursor: pointer;
+        }
+
+        .transformed {
+            margin-top: 5px;
+            transform: rotate(180deg);
+        }
+
+        #paginate_container {
+            padding: 40px 10px;
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .paginated_button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .paginated_button_active {
+            background-color: #5d74dc;
+            border: none;
+            border-radius: 2px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .fixed_header {
+            position: sticky;
+            top: 0;
+        }
+
+        .disabled {
+            pointer-events: none;
+            opacity: 0.4;
+        }
+
+        #entry_select {
+            width: 200px;
+            background-color: #ffffff;
+            height: 30px;
+            color: #0e1539;
+            border: none;
+            border-radius: 2px;
+        }
+
+        #entry_select option {
+            background-color: #202a5f;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            #content_parent,
+            #country_table {
+                width: 95% !important;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="country_table">
+
+    </div>
+    <script src="javascript.js" charset="utf-8"></script>
+</body>
+
+</html>
